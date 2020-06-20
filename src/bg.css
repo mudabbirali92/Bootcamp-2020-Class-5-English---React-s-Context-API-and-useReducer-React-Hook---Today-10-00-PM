@@ -1,0 +1,10 @@
+html, body, #root, .room {
+    height: 100%;
+    margin: 0;
+  }
+
+
+.back{
+    height: 100%;
+    background-color: aquamarine; 
+}

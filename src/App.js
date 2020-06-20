@@ -1,26 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
+import Dad from './Parent';
 import './App.css';
+import './bg.css';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  let[numbers,setNum]=React.useState(0);
+
+function increases()
+{
+
+  setNum(++numbers);
+}
+
+  return <div className="room back">
+    <center><p>Value initiated</p></center>
+    <br/>
+  
+    <Dad number = {numbers}>
+     
+      </Dad>
+      <br/>
+    <br/>
+    <center><button onClick={increases}>UPDATE</button></center>
+
+  </div>
+    
 }
 
 export default App;
