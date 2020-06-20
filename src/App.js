@@ -7,11 +7,11 @@ import contextValue from './ValueContext';
 
 function App() {
   //let[numbers,setNum]=React.useState(0);
-let values=80;
+let [values,setValues]=React.useState(0);
 function increases()
 {
 
-  ++values;
+  setValues(++values);
 }
 console.log("source has ",values);
   return ( 
