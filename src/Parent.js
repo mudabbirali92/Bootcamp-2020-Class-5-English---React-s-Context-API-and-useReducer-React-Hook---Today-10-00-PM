@@ -1,16 +1,19 @@
 import React from 'react';
 import './App.css';
-import Child from './Child.js';
+import Child from'./Child';
+//import contextValue from './ValueContext';
 
-function Dad(props)
+
+function Dad()
  {
 
-    console.log("I am in Parent and I got ",props.number)
+    
   return  <div>
       <center>Valud received from Initiation source and passed to child</center>
+      <Child></Child>
       <br/>
     <br/>
-      <Child numbers= {props.number}></Child>
+    
   </div> 
     
 }

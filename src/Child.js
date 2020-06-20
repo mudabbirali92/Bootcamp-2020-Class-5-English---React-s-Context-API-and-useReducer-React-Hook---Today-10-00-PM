@@ -1,13 +1,14 @@
 import React from 'react';
 import './App.css';
+import contextValue from './ValueContext';
 
-function Child(props)
+function Child()
  {    
-  
-    console.log("I got ",props.numbers);
+  let val=React.useContext(contextValue);
+    console.log("I got ",val);
     return <div>
   
-             <center> Child has received value from Parent which is <strong>{props.numbers}</strong>  </center>
+             <center> Child has received value from Parent which is <strong>{val}</strong>  </center>
               
             
             </div>

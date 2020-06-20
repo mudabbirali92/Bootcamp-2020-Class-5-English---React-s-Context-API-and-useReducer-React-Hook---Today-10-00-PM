@@ -2,30 +2,32 @@ import React from 'react';
 import Dad from './Parent';
 import './App.css';
 import './bg.css';
+import contextValue from './ValueContext';
 
 
 function App() {
-  let[numbers,setNum]=React.useState(0);
-
+  //let[numbers,setNum]=React.useState(0);
+let values=80;
 function increases()
 {
 
-  setNum(++numbers);
+  ++values;
 }
-
-  return <div className="room back">
+console.log("source has ",values);
+  return ( 
+  // we created context at global level
+  <contextValue.Provider value={values}>
+   <div className="room back">
     <center><p>Value initiated</p></center>
     <br/>
-  
-    <Dad number = {numbers}>
-     
-      </Dad>
+      <Dad></Dad>
       <br/>
     <br/>
     <center><button onClick={increases}>UPDATE</button></center>
 
   </div>
-    
-}
+  </contextValue.Provider>
+  
+  )};
 
 export default App;
