@@ -8,7 +8,7 @@ function Child()
     console.log("I got ",val);
     return <div>
   
-             <center> Child has received value from Parent which is <strong>{val}</strong>  </center>
+             <center> Child1 is dummy  </center>
               
             
             </div>
